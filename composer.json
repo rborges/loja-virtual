@@ -1,0 +1,20 @@
+{
+    "name": "alfamidia/loja-virtual",
+    "require": {
+        "php": ">=7.0"
+    },
+    "Authors": [{
+            "name": "Rodrigo Borges",
+            "email": "rodrigo.oborges@gmail.com"
+        }],
+    "autoload": {
+        "PSR-4": {
+            "ALFAMIDIA\\": "/vendor/alfamidia",
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "disable-tls": true,
+        "secure-http": false
+    }
+}
