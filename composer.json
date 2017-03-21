@@ -1,7 +1,7 @@
 {
     "name": "alfamidia/loja-virtual",
     "require": {
-        "php": ">=7.0"
+        "php": "^5.6 || ^7.0"
     },
     "Authors": [{
             "name": "Rodrigo Borges",
@@ -9,7 +9,7 @@
         }],
     "autoload": {
         "PSR-4": {
-            "ALFAMIDIA\\": "/vendor/alfamidia",
+            "ALFAMIDIA\\": "vendor/ALFAMIDIA/",
             "App\\": "app/"
         }
     },
