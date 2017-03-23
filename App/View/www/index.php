@@ -1,9 +1,6 @@
 <?php
-index();
-
-    function index() {
-
-        echo 'Index';
-    }
-
-  
+echo '<ul>';
+foreach ($this->view->section as $sec){
+    echo "<li>$sec</li>";
+}
+echo '</ul>';
