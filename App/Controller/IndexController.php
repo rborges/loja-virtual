@@ -11,12 +11,4 @@ class IndexController extends Controller {
 
         $this->render('index');
     }
-
-    public function Home() {
-
-        $this->view->people = ['joão', 'maria', 'josé'];
-
-        $this->render('home');
-    }
-
 }

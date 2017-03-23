@@ -1,7 +1,4 @@
-<?php
-
-echo '<ul>';
-foreach ($this->view->people as $person){
-    echo "<li>$person</li>";
-}
-echo '</ul>';
+<hr>
+<section class = "table-responsive">
+    <?php include "home/grid.php"; ?>
+</section>
