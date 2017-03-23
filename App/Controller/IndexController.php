@@ -6,7 +6,12 @@ class IndexController {
 
     public function index() {
 
-        echo 'olá';
+        echo 'Index';
+    }
+
+    public function Home() {
+
+        echo 'Home';
     }
 
 }

@@ -6,10 +6,14 @@ use ALFAMIDIA\Init\Bootstrap;
 
 class Route extends Bootstrap {
 
-    public function initRoutes() {
-
+    /**
+     * O método initRoutes é responsável por gerenciar as rotas possíveis dentro
+     * do sistema
+     */
+    protected function initRoutes() {
         $routes['index'] = array('route' => '/', 'controller' => 'IndexController', 'action' => 'index');
-        $routes['home'] = array('route' => '/home', 'controller' => 'IndexController', 'action' => 'index');
+        $routes['home'] = ['route' => '/home', 'controller' => 'indexController', 'action' => 'home'];
+
 
         $this->setRoutes($routes);
     }

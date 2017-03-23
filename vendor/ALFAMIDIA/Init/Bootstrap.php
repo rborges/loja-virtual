@@ -7,6 +7,7 @@ abstract class Bootstrap {
     private $routes;
 
     public function __construct() {
+
         $this->initRoutes();
         $this->rum($this->getUrl());
     }
@@ -16,11 +17,8 @@ abstract class Bootstrap {
     }
 
     protected function rum($url) {
-
-        walk_array($this->routes, function($route) use($url) {
-
-            if ($url === $route['route']) {
-
+        array_walk($this->routes, function($route) use($url) {
+            if ($url == $route['route']) {
                 $class = "App\\Controller\\" . ucfirst($route['controller']);
 
                 $controller = new $class;
@@ -32,6 +30,7 @@ abstract class Bootstrap {
     }
 
     protected function getUrl() {
+
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
