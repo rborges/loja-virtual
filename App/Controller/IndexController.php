@@ -6,12 +6,12 @@ class IndexController {
 
     public function index() {
 
-        echo 'Index';
+        include '../App/View/www/index.php';
     }
 
     public function Home() {
 
-        echo 'Home';
+         include '../App/View/www/home.php';
     }
 
 }
