@@ -1,3 +1,8 @@
+<?php 
+var_dump($this->view->people);
+
+die();
+?>
 <table id="table-list" class = "table table-hover">
     <thead>
         <tr>
@@ -18,9 +23,9 @@
                     <td><a  class="edit" data-toggle="modal" data-target="#modal-form" id="<?= $key ?>" ><span class="glyphicon glyphicon-edit"></span></a></td>
                     <td><a class="delete" id="<?= $key ?>"> <span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
-                <?php
-            }
-            ?>
+        <?php
+    }
+    ?>
         </tbody>
     </table>
     <?php
