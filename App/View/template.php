@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Thumbnail Gallery - Start Bootstrap Template</title>
+        <title>Curso Loja Virtual</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@
         <!-- Page Content -->
         <div class="container">
 
-            <div class="row">
+            <div class="row" style="margin-top:30px ">
 
                 <?php
                 $this->content();

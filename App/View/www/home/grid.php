@@ -1,8 +1,3 @@
-<?php 
-var_dump($this->view->people);
-
-die();
-?>
 <table id="table-list" class = "table table-hover">
     <thead>
         <tr>

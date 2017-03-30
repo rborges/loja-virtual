@@ -21,8 +21,7 @@ class Home {
     }
 
     public function listar() {
-        return [];
-        //$this->pessoas = [1 => 'joão', 2 => 'maria', 3 => 'josé'];
+        return [1 => 'joão', 2 => 'maria', 3 => 'josé'];
     }
 
 }

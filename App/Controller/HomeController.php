@@ -10,7 +10,7 @@ class HomeController extends Controller {
     public function Home() {
         $listar  =  new Home();
 
-        $this->view->people = $listar->listar();
+        $this->view->people =  $listar->listar();
 
         $this->render('home');
     }
