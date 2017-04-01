@@ -12,7 +12,7 @@ class HomeController extends Controller {
 
         $this->view->people =  $listar->listar();
 
-        $this->render('home');
+        $this->render('home',false);
     }
 
 }

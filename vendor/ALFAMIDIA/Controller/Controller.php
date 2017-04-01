@@ -24,7 +24,7 @@ abstract class Controller {
     }
 
     protected function content() {
-        
+
         include "../App/View/www/$this->action.php";
     }
 

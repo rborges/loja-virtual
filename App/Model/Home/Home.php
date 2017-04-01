@@ -10,18 +10,27 @@ class Home {
         
     }
 
-    function __get($propriedade) {
-        return $this->$propriedade;
+    public function __get($propriedade) {
+
+
+        switch ($this->$propriedade) {
+            case 'pessoas':
+                return 'Pessoa: ' . $this->$propriedade;
+                break;
+            default:
+                return $this->$propriedade;
+                break;
+        }
     }
 
     //intercepta atribuições
-    function __set($propriedade, $valor) {
+    public function __set($propriedade, $valor) {
 
         $this->$propriedade = $valor;
     }
 
     public function listar() {
-        return [1 => 'joão', 2 => 'maria', 3 => 'josé'];
+        return [1 => 'joão', 2 => 'maria', 3 => 'josé', 4 => 'Pedro'];
     }
 
 }
