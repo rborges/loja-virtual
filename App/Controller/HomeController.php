@@ -12,12 +12,12 @@ class HomeController extends Controller {
 
         $this->view->people = $listar->listar();
 
-        $this->render('home', false);
+        $this->render('home');
     }
 
     public function salvar($nome, $email) {
 
-        $pessoa = new Home;
+        $pessoa = new Home();
 
         $pessoa->nome = $nome;
         $pessoa->email = $email;

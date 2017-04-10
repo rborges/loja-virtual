@@ -2,7 +2,7 @@
 
 namespace App\Model\Home;
 
-use ALFAMIDIA\config\database;
+use ALFAMIDIA\config\Database;
 
 class Home {
 
@@ -30,20 +30,16 @@ class Home {
 
     public function salvar() {
 
-        $db = database::getDataBase();
+        $pdo = Database::getDataBase();
 
         try {
-
-            $sql = "INSERT INTO $this->table (nome, email) VALUES(:none, :email)";
-
-            $stmt = $db->prepare($sql);
-
-            $stmt->bindValue(':nome', $this->nome);
-            $stmt->bindValue(':email', $this->email);
-
+            $sql = 'INSERT INTO ' . $this->table . ' (nome, email) VALUES("' . $this->nome . '","' . $this->email . '")';
+            $stmt = $pdo->prepare($sql);
             $stmt->execute();
+            
         } catch (Exception $exc) {
-            echo $exc->getTraceAsString();
+            $error = 'Error->' . $exc->getMessage();
+            echo "<pre>$error</pre>";
         }
     }
 
