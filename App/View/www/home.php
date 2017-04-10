@@ -4,8 +4,8 @@
     
     use App\Controller\HomeController;
     
-    $nome = 'Rodrigo';
-    $email = 'rodrigo@gmail.com';
+    $nome = 'Rodrigo7';
+    $email = 'rodrigo7@gmail.com';
     
 //    include_once '../../Controller/HomeController.php';
     
