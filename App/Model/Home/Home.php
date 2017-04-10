@@ -30,13 +30,12 @@ class Home {
 
     public function salvar() {
 
-        $pdo = Database::getDataBase();
-
         try {
+            $pdo = Database::getDataBase();
+
             $sql = 'INSERT INTO ' . $this->table . ' (nome, email) VALUES("' . $this->nome . '","' . $this->email . '")';
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
-            
         } catch (Exception $exc) {
             $error = 'Error->' . $exc->getMessage();
             echo "<pre>$error</pre>";
@@ -44,7 +43,21 @@ class Home {
     }
 
     public function listar() {
-        return [1 => 'joão', 2 => 'maria', 3 => 'josé', 4 => 'Pedro'];
+
+        try {
+            $pdo = Database::getDataBase();
+
+            $sql = "SELECT * FROM {$this->table}";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            
+        } catch (Exception $exc) {
+            echo $exc->getTraceAsString();
+        } catch (PDOException $exc) {
+            echo $exc->getTraceAsString();
+        }
     }
 
 }
