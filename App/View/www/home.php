@@ -20,23 +20,30 @@
             </div>
             <div class="modal-body">
                 <fieldset title="Editar Cadastro">
-                    <form method="POST" action="editar_pessoa" data-class="Pessoa">
+                    <form method="POST" id="pessoa">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="nome">Nome</label>
                                 <input type="text" id="nome" name="nome" class="form-control"/>
                             </div>
+                        </div>
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" class="form-control"/>
                             </div>
                         </div>
-                        <input type="hidden" name="id" value=""/>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="hidden" name="id" value=""/>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+
                     </form>
                 </fieldset>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Salvar</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             </div>
         </div>
