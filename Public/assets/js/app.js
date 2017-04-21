@@ -52,7 +52,7 @@ $(document).ready(function () {
                 },
                 success: function () {
                     alert("Registro editado com sucesso!");
-                    // location.reload();
+                    location.reload();
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     console.log(textStatus);

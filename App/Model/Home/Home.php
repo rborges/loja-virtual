@@ -52,11 +52,30 @@ class Home {
             $stmt->execute();
 
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-            
         } catch (Exception $exc) {
             echo $exc->getTraceAsString();
         } catch (PDOException $exc) {
             echo $exc->getTraceAsString();
+        }
+    }
+
+    public function atualizar() {
+        try {
+            $pdo = Database::getDataBase();
+
+            $sql = "UPDATE " . $this->table . " SET nome = :nome, email = :email "
+                    . "WHERE id_$this->table = :id_$this->table";
+
+            $stmt = $pdo->prepare($sql);
+
+
+            $stmt->execute(array(
+                ':id_pessoa' => $this->id_pessoa,
+                ':nome' => $this->nome,
+                ':email' => $this->email
+            ));
+        } catch (PDOException $e) {
+            return 'Error: ' . $e->getMessage();
         }
     }
 

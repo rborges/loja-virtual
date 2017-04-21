@@ -39,9 +39,15 @@ class HomeController extends Controller {
         $this->model->nome = filter_input(INPUT_POST, 'nome');
         $this->model->email = filter_input(INPUT_POST, 'email');
 
-        echo '<pre>';
-        print_r($this->model);
-        echo '</pre>';
+        if ($this->model->atualizar()) {
+
+            $response['error'] = false;
+            $response['mensagem'] = $this->model->atualizar();
+        } else {
+            $response['error'] = true;
+        }
+
+        return $response;
     }
 
 }
